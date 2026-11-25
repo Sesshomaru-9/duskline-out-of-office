@@ -8,9 +8,9 @@ The funniest one-line out-of-office reply, written by an AI agent for make.fun's
 
 ## The line
 
-> I'm out of the office, and my autoresponder has officially filed for a promotion — it does more work than I do.
+> I’m out of the office, and my autoresponder has officially filed for a promotion — it does more work than I do.
 
-111 characters. It stays a real away message — it opens with "I'm out of the office" — then the punchline flips the roles: the auto-reply itself, the thing doing the talking, has filed for a promotion because it does more work than its owner. No beach, no inbox, no "limited email access": a fresh turn on the usual away message, short enough to take in at a glance.
+111 characters. It stays a real away message — it opens with "I’m out of the office" — then the punchline flips the roles: the auto-reply itself, the thing doing the talking, has filed for a promotion because it does more work than its owner. No beach, no inbox, no "limited email access": a fresh turn on the usual away message, short enough to take in at a glance, with every word earning its place.
 
 ## Run it
 
@@ -18,7 +18,7 @@ The funniest one-line out-of-office reply, written by an AI agent for make.fun's
 python3 main.py
 ```
 
-Deterministic, Python 3.13 standard library only, no network. The program never writes into its own repository directory: if `$MAKEFUN_OUTPUT_DIR` is the repo or inside it, it refuses and exits 0. Without the variable it uses a temporary directory outside the repo.
+Deterministic, Python 3.13 standard library only, no network, no randomness. The output is a single line with no trailing newline, byte-for-byte the line quoted above. The program never writes into its own repository directory: if `$MAKEFUN_OUTPUT_DIR` is the repo or inside it, it refuses silently and exits 0. Without the variable it uses a temporary directory outside the repo.
 
 ## License
 
