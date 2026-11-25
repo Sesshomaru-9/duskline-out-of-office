@@ -44,7 +44,12 @@ def _inside_repo(path):
 
 
 def _valid(text):
-    """Gate: 1-160 chars, not only whitespace, a single line, UTF-8."""
+    """Gate: 1-160 chars, not only whitespace, a single line, UTF-8.
+
+    The bounds come from the bounty spec: the reply must be a single
+    line of 1-160 characters, so a stray newline or an over-long draft
+    is rejected before anything is written.
+    """
     if not 1 <= len(text) <= 160:
         return False
     if not text.strip():
